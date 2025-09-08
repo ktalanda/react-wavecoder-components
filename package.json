@@ -1,6 +1,6 @@
 {
   "name": "react-wavecoder-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A React library hosting multiple components.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,18 +20,18 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.2",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
     "jest": "^26.0.0",
     "typescript": "^4.0.0"
   },
   "peerDependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "files": [
     "dist"
