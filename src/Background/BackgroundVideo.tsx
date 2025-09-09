@@ -17,6 +17,7 @@ const BackgroundVideo: React.FC<BackgroundVideoProps> = ({ videoRef, onEnded, ur
     muted
     playsInline
     onEnded={onEnded}
+    data-testid="background-video"
   >
     <source src={url.webm} type="video/webm" />
     <source src={url.mp4} type="video/mp4" />
