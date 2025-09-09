@@ -34,6 +34,7 @@ const Background: React.FC<BackgroundProps> = ({ imageUrl, videoUrl }) => {
         video.removeEventListener("timeupdate", handleTimeUpdate);
       };
     }
+    return undefined; // Explicitly return undefined for other code paths
   }, [isVideoPlaying]);
 
   const handleEnded = () => {
