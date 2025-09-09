@@ -1,0 +1,77 @@
+.Preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 111111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .3s all ease;
+  pointer-events: none;
+  backface-visibility: hidden;
+}
+
+.Preloader::before, .Preloader::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: .2s linear;
+  transform: translateY(0);
+  pointer-events: none;
+}
+
+.Preloader::before {
+  top: 0;
+  bottom: 50%;
+  background: #222;
+}
+
+.Preloader::after {
+  top: 50%;
+  bottom: 0;
+  background: #222;
+}
+
+.Preloader.loaded::before, .Preloader.loaded::after {
+  transition: .4s linear;
+}
+
+.Preloader.loaded::before {
+  transform: translateY(-101%);
+}
+
+.Preloader.loaded::after {
+  transform: translateY(101%);
+}
+
+.Preloader.loaded .Preloader-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0s;
+}
+
+.Preloader-text-center {
+  transition: 0s .2s;
+}
+
+.Preloader-container {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.Preloader-container h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 42px;
+}

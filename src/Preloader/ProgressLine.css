@@ -1,0 +1,30 @@
+#progress-line-container {
+  width: 100vw;
+  height: 5px;
+  overflow: hidden;
+  margin: auto;
+  background: #007bff;
+}
+
+.progress-line {
+  background: #fff;
+  margin-top: 0;
+  margin-left: -100vw;
+  animation-name: progess_animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 100vw;
+  height: 5px;
+  transition: .5s;
+}
+
+@keyframes progess_animation {
+  0% {
+    margin-left: -100vw;
+  }
+
+  100% {
+    margin-left: 100vw;
+  }
+}
