@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     preset: 'ts-jest',
     testEnvironment: 'jsdom',
     transform: {
@@ -9,4 +9,5 @@ module.exports = {
     moduleNameMapper: {
         '\\.css$': 'identity-obj-proxy'
     },
+    testPathIgnorePatterns: ['/node_modules/', '/scripts/'],
 };
