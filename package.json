@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "name": "react-wavecoder-components",
   "version": "0.0.9",
   "description": "A React library hosting multiple components.",
