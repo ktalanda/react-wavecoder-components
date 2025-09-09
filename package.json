@@ -9,6 +9,7 @@
     "build": "tsc && node scripts/copy-css.js",
     "test": "jest",
     "prepare": "npm run build",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
     "release": "standard-version"
   },
   "keywords": [

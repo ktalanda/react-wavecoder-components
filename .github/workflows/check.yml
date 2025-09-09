@@ -1,4 +1,4 @@
-name: Publish to npm
+name: Build, Check and Test
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  publish:
+  check:
     runs-on: ubuntu-latest
 
     steps:
