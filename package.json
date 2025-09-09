@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "react-wavecoder-components",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A React library hosting multiple components.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
