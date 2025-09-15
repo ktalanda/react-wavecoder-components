@@ -20,12 +20,36 @@ import { Footer } from 'react-wavecoder-components';
 
 ## Components
 
+### Background
+
+`Background` is a component for displaying a video or image background with play/stop controls. Example usage:
+
+```tsx
+<Background imageUrl={imageUrl} videoUrl={videoUrl} />
+```
+
 ### Footer
 
-`Footer` is a reusable React component for displaying a website footer. You can use it in your application like this:
+`Footer` is a reusable React component for displaying a website footer. Example usage:
 
 ```tsx
 <Footer />
+```
+
+### Preloader
+
+`Preloader` displays a loading animation with customizable text. Example usage:
+
+```tsx
+<Preloader topLine="Loading..." bottomLine="Please wait" loaded={false} />
+```
+
+### RotatingText
+
+`RotatingText` animates a list of strings, showing one at a time in rotation. Example usage:
+
+```tsx
+<RotatingText texts={["First", "Second", "Third"]} />
 ```
 
 ## Development
