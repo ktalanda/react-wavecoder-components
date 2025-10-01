@@ -1,0 +1,10 @@
+.link-icon {
+  font-size: 3.2rem;
+  color: #fff;
+  margin: 1rem 0;
+  transition: color 0.2s;
+}
+
+.link-icon:hover {
+  color: #1da1f2;
+}
