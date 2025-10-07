@@ -1,0 +1,39 @@
+.cookie-consent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid;
+  border-color: divider;
+  color: #555;
+}
+
+.cookie-consent-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cookie-consent-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cookie-consent-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.cookie-consent-decline-button {
+  border-color: #555;
+  color: #555;
+}
+
+.cookie-consent-decline-button:hover {
+  border-color: #333;
+  background-color: rgba(0, 0, 0, 0.04);
+}
