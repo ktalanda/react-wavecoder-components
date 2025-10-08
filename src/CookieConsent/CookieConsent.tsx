@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Button, Typography, Paper } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import localStorage from 'local-storage-fallback';
 import './CookieConsent.css';
 
@@ -48,7 +48,7 @@ const CookieConsent: React.FC = () => {
   if (!showBanner) return null;
 
   return (
-    <Paper className="cookie-consent">
+    <div className="cookie-consent">
       <Box className="cookie-consent-content">
         <Typography variant="body2" className="cookie-consent-text">
           This website uses cookies to enhance your experience and analyze site traffic. 
@@ -68,7 +68,7 @@ const CookieConsent: React.FC = () => {
           </Button>
         </Box>
       </Box>
-    </Paper>
+    </div>
   );
 };
 
