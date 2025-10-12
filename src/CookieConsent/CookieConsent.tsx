@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import localStorage from 'local-storage-fallback';
 import './CookieConsent.css';
@@ -11,38 +11,24 @@ export const isCookiesAccepted = (): boolean => {
   return getCookieConsent() === 'accepted';
 };
 
-const shouldShowBannerAgain = (): boolean => {
-  const consent = localStorage.getItem('cookieConsent');
-  const declineTimestamp = localStorage.getItem('cookieConsentDeclineTime');
-  
-  if (consent === 'accepted') return false;
-  if (!consent) return true;
-  
-  if (consent === 'declined' && declineTimestamp) {
-    const daysSinceDecline = (Date.now() - parseInt(declineTimestamp)) / (1000 * 60 * 60 * 24);
-    return daysSinceDecline > 30;
-  }
-  
-  return true;
-};
+export interface CookieConsentProps {
+  onAccept?: () => void;
+  onDecline?: () => void;
+}
 
-const CookieConsent: React.FC = () => {
+const CookieConsent: React.FC<CookieConsentProps> = ({ onAccept, onDecline }) => {
   const [showBanner, setShowBanner] = useState(false);
-
-  useEffect(() => {
-    setShowBanner(shouldShowBannerAgain());
-  }, []);
 
   const handleAccept = (): void => {
     localStorage.setItem('cookieConsent', 'accepted');
-    localStorage.removeItem('cookieConsentDeclineTime');
     setShowBanner(false);
+    onAccept?.();
   };
 
   const handleDecline = (): void => {
     localStorage.setItem('cookieConsent', 'declined');
-    localStorage.setItem('cookieConsentDeclineTime', Date.now().toString());
     setShowBanner(false);
+    onDecline?.();
   };
 
   if (!showBanner) return null;

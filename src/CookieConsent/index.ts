@@ -1,1 +1,5 @@
-export { default as CookieConsent, isCookiesAccepted } from './CookieConsent';
+export {
+    default as CookieConsent,
+    isCookiesAccepted,
+    type CookieConsentProps
+} from './CookieConsent';
