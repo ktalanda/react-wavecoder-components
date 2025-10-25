@@ -17,7 +17,7 @@ export interface CookieConsentProps {
 }
 
 const CookieConsent: React.FC<CookieConsentProps> = ({ onAccept, onDecline }) => {
-  const [showBanner, setShowBanner] = useState(false);
+  const [showBanner, setShowBanner] = useState(getCookieConsent() === null);
 
   const handleAccept = (): void => {
     localStorage.setItem('cookieConsent', 'accepted');
